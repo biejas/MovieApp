@@ -19,8 +19,11 @@ public interface MovieDao {
     Movie findByName(String title);
 
     @Insert
-    void insertAll(Movie... movies);
+    void insert(Movie... movies);
 
     @Delete
     void delete(Movie movie);
+
+    @Query("DELETE FROM movie")
+    void deleteAll();
 }

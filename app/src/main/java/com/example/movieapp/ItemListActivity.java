@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import com.example.movieapp.dummy.DummyContent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -64,6 +65,7 @@ public class ItemListActivity extends AppCompatActivity {
         View recyclerView = findViewById(R.id.item_list);
         assert recyclerView != null;
         setupRecyclerView((RecyclerView) recyclerView);
+
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
