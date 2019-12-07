@@ -20,4 +20,12 @@ public class Movie {
 
     @ColumnInfo(name = "runtime")
     public String runtime;
+
+    public Movie(int uid, String title, String director, String year, String runtime) {
+        this.uid = uid;
+        this.title = title;
+        this.director = director;
+        this.year = year;
+        this.runtime = runtime;
+    }
 }
