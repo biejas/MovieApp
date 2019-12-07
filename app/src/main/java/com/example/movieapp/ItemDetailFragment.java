@@ -61,11 +61,15 @@ public class ItemDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.item_detail, container, false);
-
+        //View rootView = inflater.inflate(R.layout.item_detail, container, false);
+        View rootView = inflater.inflate(R.layout.item_detail_table, container, false);
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.item_detail)).setText(mItem.director);
+            //((TextView) rootView.findViewById(R.id.item_detail)).setText("Director" + mItem.director);
+            ((TextView) rootView.findViewById(R.id.textView4)).setText(mItem.director);
+            ((TextView) rootView.findViewById(R.id.textView6)).setText(mItem.year);
+            ((TextView) rootView.findViewById(R.id.textView8)).setText(mItem.runtime);
+            //((TextView) rootView.findViewById(R.id.textView6)).setText("Director " +mItem.director);
         }
 
         return rootView;
