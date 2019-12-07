@@ -47,7 +47,17 @@ public class ItemListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
 
+        AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
+        List<Movie> movies = db.movieDao().getAll();
+
+        for(Movie m : movies){
+            if (!MovieContent.ITEM_MAP.containsKey(Integer.valueOf(m.uid).toString())) {
+                MovieContent.addItem(new MovieContent.MovieItem(m.uid, m.title, m.director, m.year, m.runtime));
+            }
+        }
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

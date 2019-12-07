@@ -52,8 +52,9 @@ public abstract class AppDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(Void... voids) {
             movieDao.deleteAll();
-            //add movies
-            //movieDao.insert();
+            Movie movie1 = new Movie(1, "Film1", "Director1", "2001", "101 min");
+            Movie movie2 = new Movie(2, "Film2", "Director2", "2002", "102 min");
+            movieDao.insert(movie1, movie2);
             return null;
         }
     }
