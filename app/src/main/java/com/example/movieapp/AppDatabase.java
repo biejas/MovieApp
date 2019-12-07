@@ -35,12 +35,15 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
     public void clearDb() {
         if (INSTANCE != null) {
             new PopulateDbAsync(INSTANCE).execute();
         }
     }
+
     public abstract MovieDao movieDao();
+
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         private final MovieDao movieDao;
         public PopulateDbAsync(AppDatabase instance) {

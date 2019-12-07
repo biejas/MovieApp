@@ -12,8 +12,7 @@ import java.util.Map;
 public class MovieContent {
 
     public static final List<MovieItem> ITEMS = new ArrayList<MovieItem>();
-    public static final Map<Integer, MovieItem> ITEM_MAP =  new HashMap<>();
-
+    public static final Map<String, MovieItem> ITEM_MAP =  new HashMap<>();
 
     static {
         // Add some sample items.
@@ -30,7 +29,7 @@ public class MovieContent {
     }
 
     public static class MovieItem {
-        public final int uid;
+        public final String uid;
         public final String title;
         public final String director;
         public final String year;
@@ -38,7 +37,7 @@ public class MovieContent {
 
 
         public MovieItem(int uid, String title, String director, String year, String runtime) {
-            this.uid = uid;
+            this.uid = Integer.toString(uid);
             this.title = title;
             this.director = director;
             this.year = year;
