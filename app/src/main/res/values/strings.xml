@@ -6,4 +6,5 @@
     <string name="runtime">Runtime</string>
     <string name="add_title">Title</string>
     <string name="add_movie">Add new movie to database</string>
+    <string name="add_btn">Add</string>
 </resources>
