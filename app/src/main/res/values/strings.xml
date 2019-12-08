@@ -4,4 +4,6 @@
     <string name="director">Director</string>
     <string name="year">Year</string>
     <string name="runtime">Runtime</string>
+    <string name="add_title">Title</string>
+    <string name="add_movie">Add new movie to database</string>
 </resources>
