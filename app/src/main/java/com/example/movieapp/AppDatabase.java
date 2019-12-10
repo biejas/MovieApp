@@ -3,7 +3,6 @@ package com.example.movieapp;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
