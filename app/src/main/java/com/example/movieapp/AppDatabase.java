@@ -51,10 +51,12 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         @Override
         protected Void doInBackground(Void... voids) {
-            //movieDao.deleteAll();
-            //Movie movie1 = new Movie(1,"Film1", "Director1", "2001", "101 min");
-            //Movie movie2 = new Movie(2,"Film2", "Director2", "2002", "102 min");
-            //movieDao.insert(movie1, movie2);
+            movieDao.deleteAll();
+            Movie movie1 = new Movie(1,"Podły, okrutny, zły", "Joe Berlinger", "2019", "108 min");
+            Movie movie2 = new Movie(2,"Piraci z Karaibów: Skrzynia umarlaka", "Gore Verbinski", "2006", "151 min");
+            Movie movie3 = new Movie(3,"Depresja i kumple", "Arnaud Lemort", "2012", "95 min");
+            Movie movie4 = new Movie(4,"Droga przez piekło", "Oliver Stone", "1997", "125 min");
+            movieDao.insert(movie1, movie2, movie3, movie4);
             return null;
         }
     }
